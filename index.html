@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Linux version 5.2.0">
+  <title>LEGO® BOOST programming blocks</title>
+</head>
+<body>
+  <h1>Detailed help for LEGO® BOOST app programming blocks
+  extracted directly from the app</h1>
+  <h2>Follow these steps:</h2>
+  <ol>
+    <li>
+      <p>Download the LEGO® BOOST app's OBB from your favorite APK
+      mirror.</p>Example URLs:
+      <ul>
+        <li>
+          <a href=
+          "https://apkcombo.com/lego%C2%AE-boost/com.lego.boost.boost/download/obb">
+          APKCombo</a>
+        </li>
+        <li>
+          <a href=
+          "https://apkpure.com/lego%C2%AE-boost/com.lego.boost.boost">
+          APKPure</a>
+        </li>
+      </ul>
+      <p>The current version (1.9.2) is 439.2 MB.</p>
+    </li>
+    <li>If you downloaded a packed version (.zip or .xapk), then
+    get the OBB:
+      <pre>
+      unzip -j &lt;downloaded_file_name&gt; '*main.*.com.lego.boost.boost.obb'</pre>
+    </li>
+    <li>Extract help messages for the supported languages from the
+    OBB:
+      <pre>
+      unzip -j main.*.com.lego.boost.boost.obb 'assets/BlockHelp/*.json'</pre>
+      <p>The files will be named according to the <a href=
+      "https://en.wikipedia.org/wiki/Locale_(computer_software)">locale</a>
+      naming conventions with an extension of .json.</p>
+    </li>
+    <li>
+      <p>Choose from the extracted language files in the file
+      selector:</p><input type="file" id="inputFile_id">
+      <p>The images will be loaded from lego.com, where some of
+      them are not available, some images are not even defined.
+      Some of the blocks are not available in the app, and some of
+      them are available but not included in these lists.</p>
+    </li>
+  </ol>
+  <hr>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="outputTable_id"></tbody>
+  </table>
+  <script src="scripts/lib/ejs.js">
+  </script>
+  <script src="scripts/render.js">
+  </script>
+</body>
+</html>
