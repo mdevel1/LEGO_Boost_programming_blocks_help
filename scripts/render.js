@@ -35,11 +35,13 @@ function renderData(dataText) {
             </tr>
         <% }; %>
         `;
-    let outputTable = document.getElementById('outputTable_id');
+    let outputTable = document.getElementsByClassName('help-table')[0];
+    let outputTableContents = document.getElementById('outputTableContents_id');
 
     dataJSON = JSON.parse(dataText);
     renderedHTML = ejs.render(template, dataJSON);
-    outputTable.innerHTML = unescapePermittedTags(renderedHTML);
+    outputTableContents.innerHTML = unescapePermittedTags(renderedHTML);
+    outputTable.style.display = "table";
 };
 
 
