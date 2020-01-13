@@ -50,3 +50,9 @@ function unescapePermittedTags(html) {
     html = html.replace(/&lt;\/strong&gt;/g, '</b>');
     return html
 };
+
+
+function hideInstructions() {
+    let instructions = document.getElementsByClassName('instructions')[0];
+    instructions.style.display = 'none';
+};
