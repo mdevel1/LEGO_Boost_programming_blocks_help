@@ -56,3 +56,8 @@ function hideInstructions() {
     let instructions = document.getElementsByClassName('instructions')[0];
     instructions.style.display = 'none';
 };
+
+function showInstructions() {
+    let instructions = document.getElementsByClassName('instructions')[0];
+    instructions.style.display = 'block';
+};
